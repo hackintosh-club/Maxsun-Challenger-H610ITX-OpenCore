@@ -1,73 +1,67 @@
-## 铭瑄-挑战者 H610ITX 黑苹果 OpenCore EFI
+# Gigabyte B760i AORUS PRO Hackintosh OpenCore EFI
 
-![image](ScreenShot/铭瑄H610.jpg)
+![image](ScreenShot/GigabyteB760iAORUSPRO.jpg)
+
+### [简体中文](README.zh_CN.md)
 
 ### OpenCore
 
 [OpenCore 1.0.0](https://github.com/acidanthera/OpenCorePkg)
 
-### macOS
+### OS Version Tested
 
 - macOS Monterey 12.x
 - macOS Ventura  13.x 
-- macOS Sonoma 14.x
+- macOS Sonoma  14.x 
 
-### 硬件
 
-- 芯片组: H610
-- Bios 版本: 5.24（08/15/2022）
-- 处理器: 英特尔12代 i3 -12100F
-- 内    存: 16G*2 DDR4 3200MHz
-- 硬    盘: KingBank KP260 1TB MacOS
-- 硬    盘: KingBank KP260 1TB Windows
-- 独    显: PowerColor AMD Radeon RX6650XT DDR6 8GB
-- 声    卡: 瑞昱 ALC897
-- 有线网卡: 瑞昱 8125 2.5GbE
-- 无线网卡: 白果拆机bcm94360cs2+转接板
+### Hardware
 
-### BIOS设置
+- BIOS Version: F10d  2024-06-06
+- Motherboard: Gigabyte B760i AORUS PRO
+- CPU: Intel 12th i5-12600KF
+- GPU: AMD Radeon RX6950 XT 16GB GDDR6
+- Memo: Gloway International 32GB(16GB*2) DDR5-7000 Mhz
+- SSD:  aigo P3000Pro  1TB   MacOS Sonoma + Windows 11
+- HDA: Realtek ALC897
+- LAN: Intel L225-V
+- WiFI: Killer(R) Wi-Fi 6E AX211 160MHz
 
-```
-
-|-- VT-d：开启
-|-- Above 4G decoding：开启
-|-- Resizable Bar：关闭
-|-- EHCI/XHCI Hand-off：开启
-|-- CSM Support：关闭
-|-- Fast Boot：关闭
-|-- Secure Boot：关闭
-|-- CFG LOCK：关闭
+### BIOS
 
 ```
 
-### 注意事项
+Settings
+  |-- IO Ports
+      |-- Above 4G Decoding: Enabled
+      |-- Above 4G MMIO BIOS assignment: Disabled
+      |-- Re-Size BAR Support: Disabled
+      |-- IOAPIC 24-119 Entries: Disabled
+      |-- USB Configuration
+          |-- XHCI Hand-off: Enabled 
+          |-- Port 60/64 Emulation: Disabled
+      |-- SATA Configuration
+          |-- SATA Controllers): Enabled 
+  |-- Miscellaneous 
+      |-- VT-D: Enabled    
+Boot 
+  |-- CFG Lock: Disabled
+  |-- Fast Boot: Disable Link
+  |-- CSM Support: Disabled
+  |-- Secure Boot
+      |-- Secure Boot: Disabled
+```
 
- - 安装成功后必须使用 [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools) 生成你自己的 SMBIOS
+### Notes
 
-### 参考内容
+ - Use  [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools/releases) build your SMBIOS
+ - If you want to use a CPU without  Efficient-Core, you must uncheck the option in the config.plist file Kernel--ProvideCurrentCpuinfo
+ - Use the Power button to wake up from sleep
+ - Intel AX211 WiFi driver [AirportItlwm.kext](https://github.com/OpenIntelWireless/itlwm/releases) in this EFI is only applicable to MacOS 14.5 Sonoma. Please download and replace this driver yourself when installing other MacOS versions
+ - Intel AX211 Not Supported  Airdrop
 
-[1.黑苹果安装过程演示](https://hackintosh.club/d/10000060)
+### Contact Us 
 
-[2.英特尔无线网卡WiFi驱动](https://hackintosh.club/d/10000015)
-
-[3.英特尔无线网卡蓝牙驱动](https://hackintosh.club/d/10000017)
-
-[4.我的B站黑苹果教程](https://space.bilibili.com/244390800/video)
-
-[6.黑果之家](https://hackintosh.club)
-
-### 联系我们
-
-QQ群: 23304408
+- QQ Group: 23304408
 
 ![image](ScreenShot/QRCode.png)
-
-
-
-### 常用工具
-
-- [Hackintool](https://github.com/headkaze/Hackintool) 
-- [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools) AKA `OCAT`.
-- [OpenCore Configurator](https://mackie100projects.altervista.org/opencore-configurator/) AKA `OCC`.
-- [gibMacOS](https://github.com/corpnewt/gibMacOS) Build your own MacOS image.
-- [ProperTree](https://github.com/corpnewt/ProperTree) Plist editor.
