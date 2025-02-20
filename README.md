@@ -44,6 +44,7 @@
 ### 注意事项
 
  - 安装成功后必须使用 [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools) 生成你自己的 SMBIOS
+ - [大小核心CPU设置](https://github.com/hackintosh-club/Maxsun-Challenger-H610ITX-OpenCore/issues/1#issuecomment-2670704913)
 
 ### 参考内容
 
