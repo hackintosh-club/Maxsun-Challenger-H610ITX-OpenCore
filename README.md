@@ -4,13 +4,14 @@
 
 ### OpenCore
 
-[OpenCore 1.0.0](https://github.com/acidanthera/OpenCorePkg)
+[OpenCore 1.0.3](https://github.com/acidanthera/OpenCorePkg)
 
 ### macOS
 
 - macOS Monterey 12.x
 - macOS Ventura  13.x 
 - macOS Sonoma 14.x
+- macOS Sonoma 15.x
 
 ### 硬件
 
@@ -29,7 +30,7 @@
 
 ```
 
-|-- VT-d：开启
+|-- VT-d：开启 （如启动出现灰屏或白屏请禁用此选项）
 |-- Above 4G decoding：开启
 |-- Resizable Bar：关闭
 |-- EHCI/XHCI Hand-off：开启
